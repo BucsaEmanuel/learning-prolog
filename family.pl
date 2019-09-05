@@ -78,3 +78,18 @@ predecessor(X,Z) :-			% Rule pr2: X is a predecessor of Z
 	parent(X, Y),
 	predecessor(Y, Z).
 
+somebody_has_a_child(X) :-
+	parent(X, _).
+
+
+date(1, may, 1990).
+date(2, may, 1990).
+date(3, may, 1990).
+date(4, may, 1990).
+
+day_of_date(X) :-
+	date(X, _, _).
+	
+
+get_date(X, Y, Z) :-
+	date(X, Y, Z).
